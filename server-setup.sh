@@ -46,6 +46,7 @@ cat > /etc/nginx/sites-available/memorial.conf << EOL
 server {
     listen 80;
     server_name granitmaster34.ru;
+    return 301 https://$host$request_uri;
 
     # Frontend
     location / {
@@ -56,7 +57,7 @@ server {
 
     # Backend API
     location /api {
-        proxy_pass http://0.0.0.0:8000;
+        proxy_pass https://0.0.0.0:8000; 
         proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
         proxy_set_header Connection 'upgrade';
