@@ -56,7 +56,7 @@ server {
 
     # Backend API
     location /api {
-        proxy_pass http://localhost:8000;
+        proxy_pass http://0.0.0.0:8000;
         proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
         proxy_set_header Connection 'upgrade';
