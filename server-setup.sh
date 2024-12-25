@@ -77,7 +77,7 @@ systemctl enable memorial-backend
 systemctl start memorial-backend
 
 # Настройка SSL с помощью Certbot
-certbot --nginx -d granitmaster34.ru --non-interactive --agree-tos --email rrp308531@gmail.com@gmail.com
+certbot --nginx -d granitmaster34.ru --non-interactive --agree-tos --email servercrmp123@gmail.com
 
 # Настройка автоматического обновления SSL-сертификата
 cat > /etc/cron.d/certbot << EOL
