@@ -17,7 +17,7 @@ app = FastAPI(
 # Настройка CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://1f5a-188-233-145-50.ngrok-free.app"],  # В продакшене замените на конкретный домен
+    allow_origins=["*"],  # В продакшене замените на конкретный домен
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
