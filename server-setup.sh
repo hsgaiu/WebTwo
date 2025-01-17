@@ -45,7 +45,7 @@ npm run build
 cat > /etc/nginx/sites-available/memorial.conf << EOL
 server {
     listen 80;
-    server_name granitmaster34.store;
+    server_name granitmaster34.ru;
     return 301 https://$host$request_uri;
 
     # Frontend
@@ -77,7 +77,7 @@ systemctl enable memorial-backend
 systemctl start memorial-backend
 
 # Настройка SSL с помощью Certbot
-certbot --nginx -d granitmaster34.store --non-interactive --agree-tos --email servercrmp123@gmail.com
+certbot --nginx -d granitmaster34.ru --non-interactive --agree-tos --email castelhoster@gmail.com
 
 # Настройка автоматического обновления SSL-сертификата
 cat > /etc/cron.d/certbot << EOL
