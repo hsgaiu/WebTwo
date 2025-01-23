@@ -5,7 +5,6 @@ from fastapi.encoders import jsonable_encoder
 from tortoise.contrib.fastapi import register_tortoise
 from models import Review, ReviewPydantic, ReviewIn
 from typing import List
-from datetime import datetime
 import uvicorn
 
 app = FastAPI(
